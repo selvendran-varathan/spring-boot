@@ -5,14 +5,14 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
-import code.ds.impl.ArrayImp;
+import code.ds.impl.ArrayImpl;
 
 public class ArrayImpTest {
-	ArrayImp aimp;
+	ArrayImpl aimp;
 	
 	@Before
 	public void init(){
-		aimp = new ArrayImp(100);
+		aimp = new ArrayImpl(100);
 	}
 
 	@Test
