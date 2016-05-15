@@ -4,7 +4,7 @@ public class PrimeNumber {
 	public boolean primeNumberCheck(double n){
 		int sqrt = (int) Math.sqrt(n);
 		
-		if(n < 1)
+		if(n < 2)
 			throw new IllegalArgumentException("Invalid input. Should be greter than 1");
 		
 		for(int i=2;i<sqrt;i++){

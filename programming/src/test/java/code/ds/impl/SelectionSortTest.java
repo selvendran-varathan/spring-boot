@@ -13,9 +13,9 @@ public class SelectionSortTest {
 	
 	@Test
 	public final void testSort() {
-		SelectionSort ss = new SelectionSort(10000);
+		SelectionSort ss = new SelectionSort(100);
 		ss.fillArray();
-		ss.sort();
+		ss.sortType2();
 		System.out.println("SSArray: "+ss.getArrayImpl());
 		assertTrue(ss.getArrayImpl().get(0) <= ss.getArrayImpl().get(1));
 		assertTrue(ss.getArrayImpl().get(1) <= ss.getArrayImpl().get(2));

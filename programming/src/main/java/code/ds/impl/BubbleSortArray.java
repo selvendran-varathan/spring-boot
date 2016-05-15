@@ -19,7 +19,7 @@ public class BubbleSortArray implements SortInterface {
 	 * @see code.ds.impl.SortInterface#fillArray()
 	 */
 	public void fillArray(){
-		GenericUtil.fillArray(arrayImpl, 1, 10000);
+		GenericUtil.fillArray(arrayImpl, 1, 100);
 	}
 	
 	/* (non-Javadoc)

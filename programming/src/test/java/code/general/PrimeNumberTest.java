@@ -26,6 +26,7 @@ public class PrimeNumberTest {
 	}
 	
 	@Test
+	(expected=IllegalArgumentException.class)
 	public void primeNumberZeroFail() {
 		PrimeNumber pn = new PrimeNumber();
 		assertTrue(pn.primeNumberCheck(0));
