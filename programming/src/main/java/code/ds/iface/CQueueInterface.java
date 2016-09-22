@@ -10,6 +10,4 @@ public interface CQueueInterface {
 	public int size();
 	public void enqueue(Object obj) throws QueueFullException;
 	public Object dequeue() throws QueueEmptyException;
-	
-
 }

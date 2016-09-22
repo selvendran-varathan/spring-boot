@@ -1,9 +1,6 @@
 package code.ds.impl;
 
 import java.util.Arrays;
-
-import org.apache.commons.math3.random.RandomDataImpl;
-
 import code.ds.iface.SortInterface;
 import code.general.utils.GenericUtil;
 
@@ -28,7 +25,6 @@ public class BubbleSortArray implements SortInterface {
 	public void sort(){
 		boolean swapped=true;
 		int j=0;
-		long temp;
 		long array[] = arrayImpl.getArray();
 		
 		long startTime = System.currentTimeMillis();
@@ -38,9 +34,7 @@ public class BubbleSortArray implements SortInterface {
 			j++;
 			for(int i=0;i<arrayImpl.size()-j;i++){
 				if(array[i] > array[i+1]){
-					temp=array[i];
-					array[i] = array[i+1];
-					array[i+1]=temp;
+					swap(array[i],array[i+1]);
 					swapped=true;
 				}
 			}

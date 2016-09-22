@@ -20,25 +20,30 @@ public class StackArray {
 	
 	//TODO - push, pop, peek, isEmpty, isFull
 	
-	public void push(Object obj){
-		arr[++top]=obj;
+	public void push(Object obj) throws Exception{
+		if(top<maxSize){
+			arr[++top]=obj;
+		}else{
+			throw new Exception("Stack is full");
+		}
+		
 	}
 	
-	public Object pop(){
-		return arr[top--];
+	public Object pop() throws Exception{
+		if(top > -1){
+			return arr[top--];
+		}else{
+			throw new Exception("Stack is empty");
+		}
 	}
 	
-	public Object peek(){
-		return arr[top];
+	public Object peek() throws Exception{
+		if(top>-1){
+			return arr[top];
+		}else{
+			throw new Exception("Stack is empty. No elements returned for peek");
+		}
+		
 	}
 	
-	public boolean isEmpty(){
-		return (top == -1);
-	}
-	
-	public boolean isFull(){
-		return (top == maxSize-1);
-	}
-	
-
 }
