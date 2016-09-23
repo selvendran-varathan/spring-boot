@@ -45,7 +45,7 @@ public class InsertionSort extends ParentSort {
 	}
 
 	private void shiftElementsRight(int start, int end) {
-		while(end>=start){
+		while(end>start){
 			arr[end]=arr[end-1];
 			end--;
 		}
