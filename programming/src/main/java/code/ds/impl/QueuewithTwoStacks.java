@@ -19,11 +19,4 @@ public class QueuewithTwoStacks {
 			
 	}
 	
-	public int dequeue() throws ArrayException{
-		if(!s2.isEmpty()){
-			return ((Integer)s2.pop()).intValue();
-		}
-			
-	}
-
 }
