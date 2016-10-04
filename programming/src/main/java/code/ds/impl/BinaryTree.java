@@ -12,18 +12,8 @@ public class BinaryTree {
 				return current;
 			}else if(key<current.data){
 				current=current.leftChild;
-				if(current !=null){
-					if(current.data ==key){
-						return current;
-					}
-				}
 			}else if(key>current.data){
 				current=current.rightChild;
-				if(current != null){
-					if(current.data == key){
-						return current;
-					}
-				}
 			}
 		}
 	}
@@ -82,14 +72,24 @@ public class BinaryTree {
 		}
 	}
 	
-	public int treeHeight(TreeNode node){
+	public int treeMaxHeight(TreeNode node){
 		if(node == null){
 			return 0;
 		}
-		return (1+Math.max(treeHeight(node.leftChild), treeHeight(node.rightChild)));
+		return (1+Math.max(treeMaxHeight(node.leftChild), treeMaxHeight(node.rightChild)));
+	}
+	
+	public int treeMinHeight(TreeNode node){
+		if( node == null)
+			return 0;
+		return 1+Math.min(treeMinHeight(node.leftChild), treeMinHeight(node.rightChild));
 	}
 	
 	public boolean isSuperBalanced(TreeNode node){
+		return (treeMaxHeight(node)-treeMinHeight(node) <=2);
+	}
+	
+	/*public boolean isSuperBalanced(TreeNode node){
 		if(node == null){
 			return true;
 		}
@@ -100,6 +100,6 @@ public class BinaryTree {
 		if(Math.abs(leftHeight-rightHeight) <=2 && isSuperBalanced(node.leftChild) && isSuperBalanced(node.rightChild))
 			return true;
 		return false;
-	}
+	}*/
 
 }

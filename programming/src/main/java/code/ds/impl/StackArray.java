@@ -1,5 +1,7 @@
 package code.ds.impl;
 
+import code.ds.exception.ArrayException;
+
 /*
  * Stack implementation using array
  * 
@@ -20,30 +22,47 @@ public class StackArray {
 	
 	//TODO - push, pop, peek, isEmpty, isFull
 	
-	public void push(Object obj) throws Exception{
-		if(top<maxSize){
+	public void push(Object obj) throws ArrayException{
+		if(!isFull()){
 			arr[++top]=obj;
 		}else{
-			throw new Exception("Stack is full");
+			throw new ArrayException("Stack is full");
 		}
 		
 	}
+
+	public boolean isFull() {
+		return top == (maxSize-1);
+	}
 	
-	public Object pop() throws Exception{
-		if(top > -1){
+	public Object pop() throws ArrayException{
+		if(!isEmpty()){
 			return arr[top--];
 		}else{
-			throw new Exception("Stack is empty");
+			throw new ArrayException("Stack is empty");
 		}
 	}
 	
-	public Object peek() throws Exception{
-		if(top>-1){
+	public Object peek() throws ArrayException{
+		if(!isEmpty()){
 			return arr[top];
 		}else{
-			throw new Exception("Stack is empty. No elements returned for peek");
+			throw new ArrayException("Stack is empty. No elements returned for peek");
 		}
 		
+	}
+
+	public boolean isEmpty() {
+		return top==-1;
+	}
+
+	public int min() throws ArrayException {
+		if(isEmpty()){
+			return Integer.MAX_VALUE;
+		}else{
+			ArrayWithMin awm = (ArrayWithMin) peek();
+			return awm.getMin();
+		}
 	}
 	
 }

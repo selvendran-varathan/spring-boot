@@ -28,8 +28,6 @@ public class StringProblem {
 		}
 		char[] strChars = str.toCharArray();
 		int length=str.length();
-		if(length == 1)
-			return str;
 		for(int i=0,j=length-1;i<(str.length()/2);i++,j--){
 			char c = strChars[i];
 			strChars[i]=strChars[j];
@@ -71,7 +69,6 @@ public class StringProblem {
 				str[++uniqueEndIndex]=str[i];
 			}
 		}
-		//str[uniqueEndIndex]=0;
 		return str;
 		
 	}

@@ -1,7 +1,5 @@
 package code.ds.sorting;
 
-import java.util.Arrays;
-
 public class InsertionSort extends ParentSort {
 
 	public InsertionSort(int maxSize){

@@ -1,17 +1,17 @@
 package code.cracking.iview;
 
 public class Singleton {
-	private static Singleton instance;
+	private static Singleton INSTANCE;
 	
 	private Singleton(){
 		
 	}
 	
 	public static Singleton getInstance(){
-		if(instance == null){
-			instance = new Singleton();
+		if(INSTANCE == null){
+			INSTANCE = new Singleton();
 		}
-		return instance;
+		return INSTANCE;
 	}
 
 }

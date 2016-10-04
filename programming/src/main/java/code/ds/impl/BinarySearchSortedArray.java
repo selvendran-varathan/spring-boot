@@ -61,12 +61,4 @@ public class BinarySearchSortedArray {
 			studentArr[i]=i;
 		}
 	}
-	/*public static void main(String args[]){
-		assignArray();
-		Scanner scaner = new Scanner(System.in);
-		int searchKey = scaner.nextInt();
-		scaner.close();
-		isKeyPresent(searchKey);
-		isKeyPresent2(searchKey);
-	}*/
 }
