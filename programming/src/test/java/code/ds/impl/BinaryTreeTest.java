@@ -78,7 +78,7 @@ public class BinaryTreeTest {
 		bt.insert(21);
 		System.out.println("checkTreeHeight");
 		bt.inOrderTraversal(bt.root);
-		assertEquals(bt.treeHeight(bt.root), 9);
+		assertEquals(bt.treeMaxHeight(bt.root), 9);
 	}
 	
 
